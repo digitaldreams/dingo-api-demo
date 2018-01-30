@@ -13,6 +13,8 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+$router = app('Dingo\Api\Routing\Router');
+//'middleware'=>'api.auth',
+$router->version('v1', ['namespace' => 'App\Http\Controllers\Api'], function ($api) {
+    include __DIR__ . '/version1.php';
 });

@@ -167,7 +167,7 @@ return [
         /*
          * Package Service Providers...
          */
-        Dingo\Api\Provider\LaravelServiceProvider::class,
+        LaraCrud\LaraCrudServiceProvider::class,
         Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
 
         /*
